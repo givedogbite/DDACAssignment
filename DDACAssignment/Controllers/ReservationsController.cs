@@ -73,7 +73,7 @@ namespace DDACAssignment.Views
             int roomid = 0;
             string custid = "";
             // to get empty room id for selected type of room
-            using (SqlConnection con = new SqlConnection("Server=(localdb)\\mssqllocaldb;Database=aspnet-DDACAssignment-3DBE6A94-C4E2-4946-B051-DF723269B8F9;"))
+            using (SqlConnection con = new SqlConnection("Server=tcp:hotel-management.database.windows.net,1433;Initial Catalog=aspnet-DDACAssignment-3DBE6A94-C4E2-4946-B051-DF723269B8F9;Persist Security Info=False;User ID={your_username};Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"))
             {
                 con.Open();
 
@@ -159,7 +159,7 @@ namespace DDACAssignment.Views
             int roomid = 0;
             string custid = "";
             // to get empty room id for selected type of room
-            using (SqlConnection con = new SqlConnection("Server=(localdb)\\mssqllocaldb;Database=aspnet-DDACAssignment-3DBE6A94-C4E2-4946-B051-DF723269B8F9;"))
+            using (SqlConnection con = new SqlConnection("Server=tcp:hotel-management.database.windows.net,1433;Initial Catalog=aspnet-DDACAssignment-3DBE6A94-C4E2-4946-B051-DF723269B8F9;Persist Security Info=False;User ID={your_username};Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"))
             {
                 con.Open();
 
@@ -254,7 +254,7 @@ namespace DDACAssignment.Views
                 return NotFound();
             }
 
-            using (SqlConnection con = new SqlConnection("Server=(localdb)\\mssqllocaldb;Database=aspnet-DDACAssignment-3DBE6A94-C4E2-4946-B051-DF723269B8F9;"))
+            using (SqlConnection con = new SqlConnection("Server=tcp:hotel-management.database.windows.net,1433;Initial Catalog=aspnet-DDACAssignment-3DBE6A94-C4E2-4946-B051-DF723269B8F9;Persist Security Info=False;User ID={your_username};Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"))
             {
                 string custid;
                 int price;
@@ -394,7 +394,7 @@ namespace DDACAssignment.Views
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             int room_id = 0;
-            using (SqlConnection con = new SqlConnection("Server=(localdb)\\mssqllocaldb;Database=aspnet-DDACAssignment-3DBE6A94-C4E2-4946-B051-DF723269B8F9;"))
+            using (SqlConnection con = new SqlConnection("Server=tcp:hotel-management.database.windows.net,1433;Initial Catalog=aspnet-DDACAssignment-3DBE6A94-C4E2-4946-B051-DF723269B8F9;Persist Security Info=False;User ID={your_username};Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"))
             {
                 con.Open();
 

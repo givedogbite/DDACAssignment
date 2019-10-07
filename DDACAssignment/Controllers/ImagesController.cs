@@ -197,7 +197,7 @@ namespace DDACAssignment.Views
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
             string blobname = "";
-            using (SqlConnection con = new SqlConnection("Server=(localdb)\\mssqllocaldb;Database=aspnet-DDACAssignment-3DBE6A94-C4E2-4946-B051-DF723269B8F9"))
+            using (SqlConnection con = new SqlConnection("Server=tcp:hotel-management.database.windows.net,1433;Initial Catalog=aspnet-DDACAssignment-3DBE6A94-C4E2-4946-B051-DF723269B8F9;Persist Security Info=False;User ID={your_username};Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"))
             {
                 con.Open();
                 SqlCommand da = new SqlCommand("select image_name from Image where image_id='" + id + "'", con);
