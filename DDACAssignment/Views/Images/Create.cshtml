@@ -1,0 +1,39 @@
+﻿@model DDACAssignment.Models.Image
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Image</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="image_name" class="control-label"></label>
+                <input asp-for="image_name" class="form-control" />
+                <span asp-validation-for="image_name" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                <label asp-for="room_image" class="control-label"></label>
+                <input asp-for="room_image" class="form-control" />
+                <span asp-validation-for="room_image" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <p>Upload Room Image</p>
+                <input type="file" name="file" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

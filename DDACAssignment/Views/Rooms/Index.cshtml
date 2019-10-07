@@ -1,0 +1,41 @@
+﻿@model IEnumerable<DDACAssignment.Models.Room>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.room_type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.room_availability)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.room_type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.room_availability)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.room_id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.room_id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.room_id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,48 @@
+﻿@model DDACAssignment.Models.Reservation
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Reservation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.room_id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.room_id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.check_in)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.check_in)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.check_out)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.check_out)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.total_price)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.total_price)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.reservation_id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
